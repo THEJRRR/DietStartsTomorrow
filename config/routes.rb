@@ -1,6 +1,9 @@
 DietStartsTomorrow::Application.routes.draw do
-  root 'welcome#hello'
+  root to: 'welcome#hello'
   resources :users
+
+  get '/hello', to: 'welcome#hello'
+  get '/hello/:name', to: 'welcome#hello'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
