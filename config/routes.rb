@@ -4,6 +4,7 @@ DietStartsTomorrow::Application.routes.draw do
 
   get '/hello', to: 'welcome#hello'
   get '/hello/:name', to: 'welcome#hello'
+  get '/signup', to: 'users#new'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
