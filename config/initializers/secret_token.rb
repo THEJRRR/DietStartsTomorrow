@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-DietStartsTomorrow::Application.config.secret_key_base = '6582b3a9d8d065244608e8e6de44470bcd2362161e30c6240970ccdc26d27c1db31d100128cb9ec8717ce347f23c1d3d7ca06ef03c51f388d796f0691ad4363b'
+DietStartsTomorrow::Application.config.secret_key_base = 'e04bcafed209a26dc86a1fa9c26156eeafe3e3d190a9bad3e82ed6b909d544c9985f2748090be42e679e1609b6894ececd43af4aca363f70bf4f31e973af3fc1'
