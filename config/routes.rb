@@ -1,5 +1,7 @@
 DietStartsTomorrow::Application.routes.draw do
 
+  resources :user_posts
+
   root to: 'welcome#hello'
   resources :users
 
