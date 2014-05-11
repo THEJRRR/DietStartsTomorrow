@@ -1,4 +1,16 @@
-<%= render 'layouts/bootstrap' %>
+
+
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+</div>
 
 <div class="container-fluid">
   <div class="row">
@@ -9,26 +21,26 @@
       <p id="notice"><%= notice %></p>
       <p>
         <strong>Name:</strong>
-        <%= @user.Name %>
+        <%= @user.name %>
       </p>
       <p>
         <strong>Email:</strong>
-        <%= @user.Email %>
+        <%= @user.email %>
       </p>
 
       <p>
         <strong>Dateofbirth:</strong>
-        <%= @user.DateOfBirth %>
+        <%= @user.dob %>
       </p>
 
       <p>
         <strong>Bio:</strong>
-        <%= @user.Bio %>
+        <%= @user.bio %>
       </p>
 
       <p>
         <strong>Age:</strong>
-        <%= @user.Age %>
+        <%= @user.age %>
       </p>
       <%= link_to 'Edit', edit_user_path(@user) %> |
       <%= link_to 'Back', users_path %>

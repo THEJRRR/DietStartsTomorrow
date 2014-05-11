@@ -5,6 +5,7 @@ gem 'rails', '4.0.4'
 
 group :test, :development do
 	gem 'rspec-rails'
+	gem 'factory_girl_rails', '4.2.1'
 end
 
 # Use sqlite3 as the database for Active Record
@@ -23,6 +24,9 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+
+#Authencitcation for Rails 4
+gem 'protected_attributes'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

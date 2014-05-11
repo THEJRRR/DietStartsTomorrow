@@ -1,46 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
-
-    <title>Diet Starts Tomorrow Welcome</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap theme -->
-    <link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="theme.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body role="document" style>
- 
- <%= render 'layouts/bootstrap' %>
-
   	<!--Container-->
-  	<div class="container theme-showcase" role="main">
-	  	<div class="jumbotron">
-			<h1> <%= @name %>, we are currently under construction!</h1>
 
-	 		<%= link_to "Sign up", signup_path, class: "btn btn-large btn-primary" %>
-	 		<br />
-			<%= shorten_paragraph @introduction %>
+	  <div class="jumbotron">
+      <h1>Diet Starts Tomorrow</h1>
+
+   
+			<p class="lead"> When does your diet start? How about tomorrow? As for now, let's share our irresponsible eating choices! </p>
+      <%= link_to "Sign up today", signup_path, class: "btn btn-lg btn-success" %>
+   
 		</div>
-	</div>
+	
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -48,5 +16,3 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
-</body>
-</html>
