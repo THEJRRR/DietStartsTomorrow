@@ -25,8 +25,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-#Authencitcation for Rails 4
-gem 'protected_attributes'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
