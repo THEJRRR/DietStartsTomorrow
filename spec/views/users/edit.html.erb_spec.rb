@@ -16,11 +16,11 @@ describe "users/edit" do
 
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "form[action=?][method=?]", user_path(@user), "post" do
-      assert_select "input#user_Name[name=?]", "user[Name]"
-      assert_select "input#user_Email[name=?]", "user[Email]"
-      assert_select "input#user_DateOfBirth[name=?]", "user[DateOfBirth]"
-      assert_select "input#user_Bio[name=?]", "user[Bio]"
-      assert_select "input#user_Age[name=?]", "user[Age]"
+      assert_select "input#user_name[name=?]", "user[name]"
+      assert_select "input#user_email[name=?]", "user[email]"
+      assert_select "input#user_dob[name=?]", "user[dob]"
+      assert_select "input#user_bio[name=?]", "user[bio]"
+      assert_select "input#user_age[name=?]", "user[age]"
     end
   end
 end
