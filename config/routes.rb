@@ -4,9 +4,11 @@ DietStartsTomorrow::Application.routes.draw do
 
   resources :user_posts
 
-  root to: 'welcome#hello'
   resources :users
-
+  resources :sessions, only: [:new, :create, :destroy]
+  root to: 'welcome#hello'
+  get '/signin', to: 'sessions#new'
+  delete '/signout', to: 'sessions#destroy'
   get '/hello', to: 'welcome#hello'
   get '/hello/:name', to: 'welcome#hello'
   get '/signup', to: 'users#new'
