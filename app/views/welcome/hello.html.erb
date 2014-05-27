@@ -1,14 +1,29 @@
-  	<!--Container-->
-
-	  <div class="jumbotron">
-      <h1>Diet Starts Tomorrow</h1>
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="span8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+	<div class="jumbotron">
+    <h1>Diet Starts Tomorrow</h1>
 
    
-			<p class="lead"> When does your diet start? How about tomorrow? As for now, let's share our irresponsible eating choices! </p>
+		<p class="lead"> When does your diet start? How about tomorrow? As for now, let's share our irresponsible eating choices! </p>
       <%= link_to "Sign up today", signup_path, class: "btn btn-lg btn-success" %>
    
-		</div>
+	</div>
 	
+<% end %>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

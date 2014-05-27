@@ -5,7 +5,9 @@ DietStartsTomorrow::Application.routes.draw do
   resources :user_posts
 
   resources :users
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions,    only: [:new, :create, :destroy]
+  resources :microposts,  only: [:create, :destroy]
+  
   root to: 'welcome#hello'
   get '/signin', to: 'sessions#new'
   delete '/signout', to: 'sessions#destroy'

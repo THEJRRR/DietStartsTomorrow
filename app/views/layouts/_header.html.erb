@@ -36,8 +36,8 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="/blogs">Blog</a></li>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Users", users_path %></li>
           <li><a href="/contact">Contact</a></li>
         <% if signed_in? %>
             <li><%= link_to "Users", '#' %></li>

@@ -1,4 +1,5 @@
 class UserPostsController < ApplicationController
+  
   before_action :set_user_post, only: [:show, :edit, :update, :destroy]
 
   # GET /user_posts
@@ -70,5 +71,9 @@ class UserPostsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_post_params
       params.require(:user_post).permit(:post, :time)
+    end
+
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
     end
 end
