@@ -19,6 +19,8 @@ DietStartsTomorrow::Application.routes.draw do
   get '/hello', to: 'welcome#hello'
   get '/hello/:name', to: 'welcome#hello'
   get '/signup', to: 'users#new'
+
+  mount Attachinary::Engine => "/attachinary"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

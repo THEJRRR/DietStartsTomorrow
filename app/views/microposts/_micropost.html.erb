@@ -1,5 +1,12 @@
 <li>
   <span class="content"><%= micropost.content %></span>
+
+  <% if micropost.photo %>
+    <%= cl_image_tag(micropost.photo.path, { size: '125x125', crop: :fit }) %>
+  <% else %>
+    No Photo!
+  <% end %>
+
   <span class="timestamp">
     Posted <%= time_ago_in_words(micropost.created_at) %> ago.
   </span>

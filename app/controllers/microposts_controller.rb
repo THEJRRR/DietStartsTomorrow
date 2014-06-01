@@ -7,7 +7,8 @@ class MicropostsController <ApplicationController
 			flash[:success] = "Micropost created!"
 			redirect_to root_url
 		else
-			render 'static_pages/home'
+			flash[:failure] = "Micropost failed, please try again"
+			render 'welcome/hello'
 		end
 	end
 
@@ -23,7 +24,7 @@ class MicropostsController <ApplicationController
 	private
 
 	def micropost_params
-		params.require(:micropost).permit(:content)
+		params.require(:micropost).permit(:content, :photo, :signature, :created_at, :bytes, :type, :etag, :url, :secure_url)
 	end
 
 	def correct_user

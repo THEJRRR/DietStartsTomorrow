@@ -56,6 +56,10 @@ group :development do
 	gem 'better_errors'
 end
 
+#image storage
+gem 'cloudinary'
+gem 'attachinary'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
