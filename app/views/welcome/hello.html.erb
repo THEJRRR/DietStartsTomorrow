@@ -5,6 +5,9 @@
         <%= render 'shared/user_info' %>
       </section>
       <section>
+        <%= render 'shared/stats' %>
+      </section>
+      <section>
         <%= render 'shared/micropost_form' %>
       </section>
     </aside>
@@ -17,12 +20,12 @@
 	<div class="jumbotron">
     <h1>Diet Starts Tomorrow</h1>
 
-   
+
 		<p class="lead"> When does your diet start? How about tomorrow? As for now, let's share our irresponsible eating choices! </p>
       <%= link_to "Sign up today", signup_path, class: "btn btn-lg btn-success" %>
-   
+
 	</div>
-	
+
 <% end %>
 
 
@@ -30,4 +33,3 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-

@@ -1,13 +1,18 @@
 DietStartsTomorrow::Application.routes.draw do
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
 
   resources :blogs
 
   resources :user_posts
 
-  resources :users
-  resources :sessions,    only: [:new, :create, :destroy]
-  resources :microposts,  only: [:create, :destroy]
-  
+  resources :sessions,      only: [:new, :create, :destroy]
+  resources :microposts,    only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
+
   root to: 'welcome#hello'
   get '/signin', to: 'sessions#new'
   delete '/signout', to: 'sessions#destroy'

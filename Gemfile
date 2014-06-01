@@ -52,6 +52,10 @@ gem 'bcrypt-ruby', '3.1.2'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+group :development do
+	gem 'better_errors'
+end
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

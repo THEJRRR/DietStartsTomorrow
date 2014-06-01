@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "AuthenticationPages" do
 
 	subject { page }
-  
+
   	describe "signin page" do
     	before { visit signin_path }
 
@@ -40,7 +40,7 @@ describe "AuthenticationPages" do
     		it { should have_link('Settings', 	href: edit_user_path(user)) }
     		it { should have_link('Sign out', 	href: signout_path) }
     		it { should have_link('Sign in', 	href: signin_path) }
-    		
+
     		describe "followed by signout" do
     			before { click_link "Sign out" }
     			it { should have_link('Sign in') }
@@ -82,7 +82,7 @@ describe "AuthenticationPages" do
 			end
 		end
 
-			describe "in the Users controller" do 
+			describe "in the Users controller" do
 
 				describe "visiting the edit page" do
 					before { visit edit_user_path(user) }
@@ -98,8 +98,18 @@ describe "AuthenticationPages" do
 					before { visit users_path }
 					it { should have_title('Sign in') }
 				end
+
+				describe "visiting the following page" do
+          before { visit following_user_path(user) }
+          it { should have_title('Sign in') }
+        end
+
+        describe "visiting the followers page" do
+          before { visit followers_user_path(user) }
+          it { should have_title('Sign in') }
+        end
 			end
-		
+
 		describe "as non-admin user" do
 			let(:user) { FactoryGirl.create(:user) }
 			let(:non_admin) { FactoryGirl.create(:user) }
@@ -111,7 +121,7 @@ describe "AuthenticationPages" do
 				specify { expect(response).to redirect_to(root_url) }
 			end
 		end
-		
+
 		describe "as wrong user" do
 			let (:user) { FactoryGirl.create(:user) }
 			let (:wrong_user) { FactoryGirl.create(:user, email: "wrong@example.com") }
