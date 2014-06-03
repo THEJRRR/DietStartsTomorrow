@@ -13,8 +13,7 @@ group :test, :development do
   	gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -59,6 +58,11 @@ end
 #image storage
 gem 'cloudinary'
 gem 'attachinary'
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+end
 
 # Use unicorn as the app server
 # gem 'unicorn'
